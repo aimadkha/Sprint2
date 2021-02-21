@@ -1,0 +1,67 @@
+answers
+
+3- Sélectionnez les noms de tous les produits du magasin.
+SELECT name FROM products;
+
+4/ Sélectionner les noms et les prix de tous les produits du magasin.
+SELECT name, price FROM products;
+
+5/ Sélectionner le nom des produits dont le prix est inférieur ou égal à 200 $.
+SELECT name FROM products WHERE Price <= 200;
+
+6/ Sélectionnez tous les produits dont le prix est compris entre 60 et 120 dollars.
+  SELECT * FROM products WHERE Price > 60 AND Price < 120 ;
+  
+7/ Sélectionnez le nom et le prix en cents (c'est-à-dire que le prix doit être multiplié par 100).
+SELECT Name , Price * 100 FROM products;
+
+8/ Calculer le prix moyen de tous les produits.
+SELECT avg(Price) FROM products;
+
+9/ Calculer le prix moyen de tous les produits dont le code fabricant est égal à 2.
+ SELECT avg(Price) FROM products WHERE code = 2;
+ 
+10/ Calculer le nombre de produits dont le prix est supérieur ou égal à 180 dollars.
+  SELECT count(name) FROM products WHERE Price >= 180;
+  
+11/ Sélectionner le nom et le prix de tous les produits dont le prix est supérieur ou égal à 180 dollars, et trier d'abord par prix (par ordre décroissant),
+   puis par nom (par ordre croissant).
+   
+   SELECT name, Price FROM products WHERE Price >= 180 ORDER BY Price DESC, name ASC; 
+
+12/ Sélectionnez toutes les données des produits, y compris toutes les données relatives au fabricant de chaque produit.
+   
+   SELECT * FROM products 
+	JOIN manufacturers
+    ON products.code = manufacturers.code;
+    
+13/ Sélectionnez le nom du produit, le prix et le nom du fabricant de tous les produits.
+SELECT products.Name, products.Price, manufacturers.Name 
+	FROM products
+    JOIN manufacturers
+    ON products.code = manufacturers.code;  
+    
+14/ Sélectionnez le prix moyen des produits de chaque fabricant, en indiquant uniquement le code du fabricant.
+SELECT AVG(products.Price), manufacturers.Code 
+	FROM products
+    JOIN manufacturers
+    ON products.code = manufacturers.code
+    GROUP BY manufacturers.Name; 
+    
+    
+15/ Sélectionnez le prix moyen des produits de chaque fabricant, en indiquant le nom du fabricant.
+SELECT AVG(products.Price), manufacturers.Name
+	FROM products
+    JOIN manufacturers
+    ON products.code = manufacturers.code
+    GROUP BY manufacturers.Name;     
+    
+17/ Sélectionnez le nom et le prix du produit le moins cher.
+	SELECT Name, Price FROM products
+	ORDER BY Price LIMIT 1;
+   
+   
+
+
+
+
