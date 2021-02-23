@@ -56,6 +56,7 @@ SELECT AVG(products.Price), manufacturers.Name
     ON products.code = manufacturers.code
     GROUP BY manufacturers.Name;     
     
+    
 17/ Sélectionnez le nom et le prix du produit le moins cher.
 	SELECT Name, Price FROM products
 	ORDER BY Price LIMIT 1;
