@@ -1,0 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,900;1,100;1,400;1,500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+:root {
+  --blackcolor: #201F24;
+  --orangecolor: #FC6011;
+  --whitecolor: #F7F9F8;
+  --bgcolor: #E8EAE6;
+  --fontfamily: poppins,sans-serif;
+  --container:80%; }
+
+.header .home {
+  height: 100vh;
+  background-image: url(../../../images/header-home.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 90%;
+  background-position: top;
+  position: relative; }
+  .header .home__content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%); }
+    .header .home__content .home__title {
+      color: var(--orangecolor);
+      text-align: center; }
+    .header .home__content .home__text {
+      color: var(--whitecolor);
+      text-align: center; }
+  .header .home .navbar {
+    display: flex;
+    width: 80%;
+    margin: auto; }
+    .header .home .navbar__logo {
+      width: 40%; }
+    .header .home .navbar__ul {
+      list-style-type: none;
+      display: flex;
+      align-self: center;
+      justify-content: space-around;
+      width: 60%; }
+      .header .home .navbar__ul a {
+        text-decoration: none;
+        color: var(--whitecolor); }

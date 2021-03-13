@@ -1,0 +1,20 @@
+{
+  "name": "brief_projet",
+  "version": "1.0.0",
+  "description": "font-family: poppins,sans-serif;\r family-fonts : font-family: josefin sans,sans-serif;",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.32.8"
+  },
+  "devDependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "scripts": {
+    "watch:sass": "node-sass css/main.scss css/style.css -w",
+    "compiler:sass": "node-sass css/main.scss css/style.css",
+    "start": "concurrently \"npm run watch:sass\" \"live-server\""
+
+  },
+  "author": "aimad elkhattabi",
+  "license": "ISC"
+}

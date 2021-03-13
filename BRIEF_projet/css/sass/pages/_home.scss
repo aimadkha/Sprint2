@@ -1,0 +1,60 @@
+.header{
+    .home{
+        height: 100vh;
+        background-image: url(../../../images/header-home.jpg);
+        background-repeat: no-repeat;
+        background-size:100% 90%;
+        background-position:top;
+        position: relative;
+        &__content{
+            // background-color: aqua;
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            .home__title{
+                color: var(--orangecolor);
+                text-align: center;
+            }
+            .home__text{
+                color: var(--whitecolor);
+                text-align: center;
+            }
+        }
+        
+
+        .navbar{
+            display: flex;
+            // justify-content: space-around;
+            width: 80%;
+            margin: auto;
+        
+            &__logo{
+                width: 40%;
+            }
+        
+            &__ul{
+                list-style-type: none;
+                display: flex;
+                align-self: center;
+                justify-content:space-around;
+                width: 60%;
+                a{
+                    text-decoration: none;
+                    color: var(--whitecolor);
+                }
+            }
+        
+        }
+    
+    }
+
+}
+
+// .main{
+
+// }
+
+// .footer{
+
+// }
