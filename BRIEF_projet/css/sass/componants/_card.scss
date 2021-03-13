@@ -1,0 +1,161 @@
+.menu {
+    &__card1 {
+        position: relative;
+
+        &--btn {
+            .submit {
+                background-color: var(--orangecolor);
+                color: var(--whitecolor);
+                border: none;
+                border-radius: 25px;
+                width: 6rem;
+                height: 1.5rem;
+                display: none;
+                position: absolute;
+                bottom: 10%;
+                left: 40%;
+            }
+
+        }
+
+        &:hover &--btn {
+            .submit {
+                display: block;
+            }
+
+        }
+    }
+
+    &__card2 {
+        position: relative;
+
+        &--btn {
+            .submit {
+                background-color: var(--orangecolor);
+                color: var(--whitecolor);
+                border: none;
+                border-radius: 25px;
+                width: 6rem;
+                height: 1.5rem;
+                display: none;
+                position: absolute;
+                bottom: 10%;
+                left: 40%;
+            }
+
+        }
+
+        &:hover &--btn {
+            .submit {
+                display: block;
+            }
+        }
+    }
+    &__card3 {
+        position: relative;
+
+        &--btn {
+            .submit {
+                background-color: var(--orangecolor);
+                color: var(--whitecolor);
+                border: none;
+                border-radius: 25px;
+                width: 6rem;
+                height: 1.5rem;
+                display: none;
+                position: absolute;
+                bottom: 10%;
+                left: 40%;
+            }
+
+        }
+        &:hover &--btn {
+            .submit {
+                display: block;
+            }
+
+        }
+    }
+    &__card4 {
+        position: relative;
+
+        &--btn {
+            .submit {
+                background-color: var(--orangecolor);
+                color: var(--whitecolor);
+                border: none;
+                border-radius: 25px;
+                width: 6rem;
+                height: 1.5rem;
+                display: none;
+                position: absolute;
+                bottom: 10%;
+                left: 40%;
+            }
+
+        }
+
+        &:hover &--btn {
+            .submit {
+                display: block;
+            }
+
+        }
+    }
+    &__card5 {
+        position: relative;
+
+        &--btn {
+            .submit {
+                background-color: var(--orangecolor);
+                color: var(--whitecolor);
+                border: none;
+                border-radius: 25px;
+                width: 6rem;
+                height: 1.5rem;
+                display: none;
+                position: absolute;
+                bottom: 10%;
+                left: 40%;
+            }
+
+        }
+
+        &:hover &--btn {
+            .submit {
+                display: block;
+            }
+
+        }
+    }
+    &__card6 {
+        position: relative;
+
+        &--btn {
+            .submit {
+                background-color: var(--orangecolor);
+                color: var(--whitecolor);
+                border: none;
+                border-radius: 25px;
+                width: 6rem;
+                height: 1.5rem;
+                display: none;
+                position: absolute;
+                bottom: 10%;
+                left: 40%;
+            }
+
+        }
+
+        &:hover &--btn {
+            .submit {
+                display: block;
+            }
+
+        }
+    }
+
+
+
+
+}

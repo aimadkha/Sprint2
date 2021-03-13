@@ -4,6 +4,9 @@
   padding: 0;
   box-sizing: border-box; }
 
+body {
+  font-family: var(--fontfamily); }
+
 :root {
   --blackcolor: #201F24;
   --orangecolor: #FC6011;
@@ -12,36 +15,180 @@
   --fontfamily: poppins,sans-serif;
   --container:80%; }
 
-.header .home {
-  height: 100vh;
-  background-image: url(../../../images/header-home.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 90%;
-  background-position: top;
-  position: relative; }
-  .header .home__content {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
-    .header .home__content .home__title {
-      color: var(--orangecolor);
-      text-align: center; }
-    .header .home__content .home__text {
-      color: var(--whitecolor);
-      text-align: center; }
-  .header .home .navbar {
-    display: flex;
-    width: 80%;
-    margin: auto; }
-    .header .home .navbar__logo {
-      width: 40%; }
-    .header .home .navbar__ul {
-      list-style-type: none;
+body {
+  display: grid;
+  grid-template-rows: auto auto auto;
+  background-color: #eef2f3; }
+  body .header .home {
+    height: 100vh;
+    background-image: url(../../../images/header-home.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-position: top;
+    position: relative; }
+    body .header .home__content {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%, -50%); }
+      body .header .home__content .home__title {
+        color: var(--orangecolor);
+        text-align: center;
+        font-size: 2rem;
+        font-weight: 700;
+        font-style: italic;
+        margin-bottom: 1rem; }
+      body .header .home__content .home__text {
+        color: var(--whitecolor);
+        text-align: center;
+        font-size: 1.5rem;
+        font-style: italic;
+        font-weight: 700; }
+    body .header .home .navbar {
       display: flex;
-      align-self: center;
-      justify-content: space-around;
-      width: 60%; }
-      .header .home .navbar__ul a {
-        text-decoration: none;
-        color: var(--whitecolor); }
+      width: 80%;
+      margin: auto; }
+      body .header .home .navbar__logo {
+        width: 40%; }
+      body .header .home .navbar__ul {
+        list-style-type: none;
+        display: flex;
+        align-self: center;
+        justify-content: space-around;
+        width: 60%; }
+        body .header .home .navbar__ul a {
+          text-decoration: none;
+          color: var(--whitecolor);
+          font-size: 1rem;
+          font-style: italic;
+          font-weight: 700; }
+  body .main {
+    background-color: var(--bgcolor);
+    width: var(--container);
+    margin: auto; }
+    body .main__heading {
+      text-align: center; }
+    body .main .menu {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, 22rem); }
+      body .main .menu .menu__card1 {
+        background-image: url(../../../images/1.JPEG);
+        background-size: 100% 100%;
+        background-repeat: no-repeat; }
+      body .main .menu .menu__card2 {
+        background-image: url(../../../images/2.JPEG);
+        background-size: 100% 100%;
+        background-repeat: no-repeat; }
+      body .main .menu .menu__card3 {
+        background-image: url(../../../images/3.JPEG);
+        background-size: 100% 100%;
+        background-repeat: no-repeat; }
+      body .main .menu .menu__card4 {
+        background-image: url(../../../images/4.JPEG);
+        background-size: 100% 100%;
+        background-repeat: no-repeat; }
+      body .main .menu .menu__card5 {
+        background-image: url(../../../images/5.JPEG);
+        background-size: 100% 100%;
+        background-repeat: no-repeat; }
+      body .main .menu .menu__card6 {
+        background-image: url(../../../images/6.JPEG);
+        background-size: 100% 100%;
+        background-repeat: no-repeat; }
+
+.menu__card1 {
+  position: relative; }
+  .menu__card1--btn .submit {
+    background-color: var(--orangecolor);
+    color: var(--whitecolor);
+    border: none;
+    border-radius: 25px;
+    width: 6rem;
+    height: 1.5rem;
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    left: 40%; }
+  .menu__card1:hover .menu__card1--btn .submit {
+    display: block; }
+
+.menu__card2 {
+  position: relative; }
+  .menu__card2--btn .submit {
+    background-color: var(--orangecolor);
+    color: var(--whitecolor);
+    border: none;
+    border-radius: 25px;
+    width: 6rem;
+    height: 1.5rem;
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    left: 40%; }
+  .menu__card2:hover .menu__card2--btn .submit {
+    display: block; }
+
+.menu__card3 {
+  position: relative; }
+  .menu__card3--btn .submit {
+    background-color: var(--orangecolor);
+    color: var(--whitecolor);
+    border: none;
+    border-radius: 25px;
+    width: 6rem;
+    height: 1.5rem;
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    left: 40%; }
+  .menu__card3:hover .menu__card3--btn .submit {
+    display: block; }
+
+.menu__card4 {
+  position: relative; }
+  .menu__card4--btn .submit {
+    background-color: var(--orangecolor);
+    color: var(--whitecolor);
+    border: none;
+    border-radius: 25px;
+    width: 6rem;
+    height: 1.5rem;
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    left: 40%; }
+  .menu__card4:hover .menu__card4--btn .submit {
+    display: block; }
+
+.menu__card5 {
+  position: relative; }
+  .menu__card5--btn .submit {
+    background-color: var(--orangecolor);
+    color: var(--whitecolor);
+    border: none;
+    border-radius: 25px;
+    width: 6rem;
+    height: 1.5rem;
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    left: 40%; }
+  .menu__card5:hover .menu__card5--btn .submit {
+    display: block; }
+
+.menu__card6 {
+  position: relative; }
+  .menu__card6--btn .submit {
+    background-color: var(--orangecolor);
+    color: var(--whitecolor);
+    border: none;
+    border-radius: 25px;
+    width: 6rem;
+    height: 1.5rem;
+    display: none;
+    position: absolute;
+    bottom: 10%;
+    left: 40%; }
+  .menu__card6:hover .menu__card6--btn .submit {
+    display: block; }
