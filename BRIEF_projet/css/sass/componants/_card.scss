@@ -13,14 +13,34 @@
                 display: none;
                 position: absolute;
                 bottom: 10%;
-                left: 40%;
+                left: 35%;
+                cursor: pointer;
+                &:active{
+                    background-color: #3e8e41;
+                    box-shadow: 0 5px #666;
+                    transform: translateY(2px);
+                }
+            }
+            .menu__text{
+                color: var(--whitecolor);
+                text-align: center;
+                font-size: 1.2rem;
+                position: absolute;
+                bottom: 20%;
+                left: 30%;
+                line-height:2rem ;
+                display: none;
             }
 
         }
 
-        &:hover &--btn {
+        &:hover {
+            .menu__text{
+                display: block;
+            }
             .submit {
                 display: block;
+                
             }
 
         }

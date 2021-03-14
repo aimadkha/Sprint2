@@ -17,7 +17,7 @@ body {
 
 body {
   display: grid;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: auto auto auto 4rem;
   background-color: #eef2f3; }
   body .header .home {
     height: 100vh;
@@ -97,6 +97,116 @@ body {
         background-size: 100% 100%;
         background-repeat: no-repeat; }
 
+.footer {
+  width: var(--container);
+  margin: auto; }
+  .footer .contact {
+    width: 100%;
+    display: flex; }
+    .footer .contact__info {
+      width: 50%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      background-color: #E8EAE6;
+      padding: 2rem; }
+      .footer .contact__info .contact__logo {
+        width: 30%;
+        align-self: center; }
+      .footer .contact__info .contact__local {
+        display: flex;
+        align-items: baseline;
+        margin-top: 2rem; }
+        .footer .contact__info .contact__local .contact__desc {
+          margin-left: 2rem;
+          color: var(--orangecolor);
+          font-style: italic;
+          font-size: 1.2rem; }
+      .footer .contact__info .contact__phone {
+        display: flex;
+        align-items: baseline;
+        margin-top: 2rem; }
+        .footer .contact__info .contact__phone .contact__num {
+          margin-left: 1.7rem;
+          color: var(--orangecolor);
+          font-style: italic;
+          font-size: 1.2rem; }
+      .footer .contact__info .contact__mail {
+        display: flex;
+        align-items: baseline;
+        margin-top: 2rem; }
+        .footer .contact__info .contact__mail .contact__gmail {
+          margin-left: 1.7rem;
+          color: var(--orangecolor);
+          font-style: italic;
+          font-size: 1.2rem; }
+    .footer .contact__socmedia {
+      width: 50%;
+      background-color: #E8EAE6;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .footer .contact__socmedia .contact__heading {
+        font-size: 2rem;
+        font-weight: 400;
+        font-style: italic; }
+      .footer .contact__socmedia .contact__icons {
+        padding: 1rem; }
+        .footer .contact__socmedia .contact__icons a {
+          text-decoration: none;
+          color: #000;
+          padding: 1rem; }
+
+.copyright {
+  background-color: var(--blackcolor);
+  height: 4rem; }
+  .copyright__text {
+    color: var(--whitecolor);
+    text-align: center;
+    padding: .5rem;
+    font-size: 2rem;
+    font-style: italic;
+    font-weight: 400; }
+
+.cont {
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .cont .login {
+    border: 2px solid grey;
+    width: 30%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E8EAE6; }
+    .cont .login__form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .cont .login__form .login__user {
+        color: var(--orangecolor);
+        font-size: 1rem;
+        font-weight: 400;
+        padding: .5rem; }
+      .cont .login__form .login__pass {
+        color: var(--orangecolor);
+        font-size: 1rem;
+        font-weight: 400;
+        padding: .5rem; }
+      .cont .login__form .login__submit {
+        width: 7rem;
+        height: 2rem;
+        color: var(--whitecolor);
+        background-color: var(--orangecolor);
+        border-radius: 15px;
+        border: none;
+        cursor: pointer;
+        margin-top: 1rem; }
+
 .menu__card1 {
   position: relative; }
   .menu__card1--btn .submit {
@@ -109,8 +219,24 @@ body {
     display: none;
     position: absolute;
     bottom: 10%;
-    left: 40%; }
-  .menu__card1:hover .menu__card1--btn .submit {
+    left: 35%;
+    cursor: pointer; }
+    .menu__card1--btn .submit:active {
+      background-color: #3e8e41;
+      box-shadow: 0 5px #666;
+      transform: translateY(2px); }
+  .menu__card1--btn .menu__text {
+    color: var(--whitecolor);
+    text-align: center;
+    font-size: 1.2rem;
+    position: absolute;
+    bottom: 20%;
+    left: 30%;
+    line-height: 2rem;
+    display: none; }
+  .menu__card1:hover .menu__text {
+    display: block; }
+  .menu__card1:hover .submit {
     display: block; }
 
 .menu__card2 {

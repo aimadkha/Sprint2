@@ -1,0 +1,51 @@
+.cont{
+    // width: 90vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .login{
+        border: 2px solid grey;
+        width: 30%;
+        height: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #E8EAE6;
+        &__form{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+
+            .login__user{
+                color: var(--orangecolor);
+                font-size: 1rem;
+                font-weight: 400;
+                // font-style: italic;
+                padding: .5rem;
+            }
+            .login__pass{
+                color: var(--orangecolor);
+                font-size: 1rem;
+                font-weight: 400;
+                // font-style: italic;
+                padding: .5rem;
+            }
+            .login__submit{
+                width: 7rem;
+                height: 2rem;
+                color: var(--whitecolor);
+                background-color: var(--orangecolor);
+                border-radius: 15px;
+                border: none;
+                cursor: pointer;
+                margin-top: 1rem;
+            }
+
+        }
+        
+    
+    }
+}
