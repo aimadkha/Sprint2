@@ -1,0 +1,51 @@
+.container {
+    width: 90%;
+    height: 5rem;
+    margin: auto;
+    display: flex;
+    border: 1px solid grey;
+
+    .dashboard__logo {
+        width: 40%;
+    }
+
+    .dashboard__ul {
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+
+        li {
+            list-style-type: none;
+
+            a {
+                text-decoration: none;
+                color: var(--blackcolor);
+            }
+        }
+    }
+
+    .dashboard__profile {
+
+        .dashboard__img {
+            width: 3rem;
+            height: 3rem;
+        }
+    }
+
+
+
+}
+
+.admin__main{
+    width: 60%;
+    margin: 5% auto;
+    border: 1px solid grey;
+    .dashboard__heading{
+        color: orangered;
+        font-size: 3rem;
+        font-weight: 700;
+        font-style: italic;
+        text-align: center;
+    }  
+}

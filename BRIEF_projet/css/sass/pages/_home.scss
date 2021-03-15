@@ -4,6 +4,9 @@ body {
   // grid-template-columns: ;
   grid-template-rows: auto auto auto 4rem;
   background-color: #eef2f3;
+  @media (max-width:$mobilesize) {
+    grid-template-rows: auto auto auto 2rem; 
+  }
 
   .header {
     .home {
@@ -13,12 +16,22 @@ body {
       background-size: 100% 100%;
       background-position: top;
       position: relative;
+      @media (max-width:$mobilesize) {
+
+        
+      }
 
       &__content {
         position: absolute;
         top: 40%;
         left: 50%;
         transform: translate(-50%, -50%);
+        @media (max-width:$mobilesize) {
+          top: 50%;
+          font-size: 1.5rem;
+          width: 90%;
+          margin: auto;
+        }
 
         .home__title {
           color: var(--orangecolor);
@@ -43,9 +56,20 @@ body {
         // justify-content: space-around;
         width: 80%;
         margin: auto;
-
+        @media (max-width:$mobilesize) {
+          flex-direction: column;
+        }
         &__logo {
           width: 40%;
+          @media (max-width:$mobilesize) {
+            margin: auto;
+          }
+        }
+        &__down{
+          visibility: hidden;
+          @media (max-width:$mobilesize) {
+            visibility: visible;
+          }
         }
 
         &__ul {
@@ -54,6 +78,14 @@ body {
           align-self: center;
           justify-content: space-around;
           width: 60%;
+          @media (max-width:$mobilesize) {
+            flex-direction: column;
+            width: 80%;
+            margin: auto;
+            justify-content: flex-start;
+            align-items: center;
+            display:none;
+          }
 
           a {
             text-decoration: none;
@@ -69,7 +101,7 @@ body {
 
   .main {
     background-color: var(--bgcolor);
-    width: var(--container);
+    width: $container;
     margin: auto;
 
     &__heading {
@@ -80,7 +112,15 @@ body {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, 22rem);
-      //   gap: 1rem;
+      @media (max-width:900px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 22rem);
+      }
+      @media (max-width:$mobilesize) {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(6, 22rem);
+      }
+      
 
       .menu__card1 {
         background-image: url(../../../images/1.JPEG);
@@ -130,13 +170,16 @@ body {
 }
 
 .footer {
-  width: var(--container);
+  width:$container;
   margin: auto;
   
 
   .contact {
     width: 100%;
     display: flex;
+    @media (max-width:$mobilesize) {
+      flex-direction: column;
+    }
     
 
     &__info {
@@ -146,6 +189,9 @@ body {
       align-items: flex-start;
       background-color: #E8EAE6;
       padding: 2rem;
+      @media (max-width:$mobilesize) {
+        width: 100%; 
+      }
 
       .contact__logo {
         width: 30%;
@@ -198,6 +244,9 @@ body {
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      @media (max-width:$mobilesize) {
+        width: 100%; 
+      }
       .contact__heading{
         font-size: 2rem;
         font-weight: 400;
@@ -218,6 +267,9 @@ body {
 .copyright{
   background-color: var(--blackcolor);
   height: 4rem;
+  @media (max-width:$mobilesize) {
+    height: 2rem;
+  }
   &__text{
     color: var(--whitecolor);
     text-align: center;
@@ -225,5 +277,12 @@ body {
     font-size: 2rem;
     font-style: italic;
     font-weight: 400;
+    @media (max-width:$mobilesize) {
+      font-size: 1rem; 
+    }
   }
+}
+
+.navbar__down--active{
+  display: block;
 }
