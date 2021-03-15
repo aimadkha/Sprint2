@@ -4,14 +4,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
+   
     .login{
         border: 2px solid grey;
-        width: 30%;
+        width:50%;
         height: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
         background-color: #E8EAE6;
+        @media (max-width:$mobilesize) {
+            width: 50%; 
+        }
         &__form{
             display: flex;
             flex-direction: column;
