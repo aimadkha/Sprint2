@@ -39,6 +39,7 @@
 
 .admin__main{
     width: 60%;
+    height: 60vh;
     margin: 5% auto;
     border: 1px solid grey;
     .dashboard__heading{
@@ -47,5 +48,18 @@
         font-weight: 700;
         font-style: italic;
         text-align: center;
+        margin: 3rem auto;
     }  
+    .admin__btn{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        gap: 1rem;
+        .admin__btnstyle{
+            background-color: var(--orangecolor);
+            // width: 40%;
+            height: 4rem;
+            color: var(--whitecolor);
+        }
+    }
 }
