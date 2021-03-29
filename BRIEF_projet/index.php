@@ -49,7 +49,7 @@
 
   <main class="main">
 
-    <p class="main__heading">Our Favorite plate</p>
+    <p class="main__heading">Most loved dishes</p>
     <div class="menu">
       
       <?php 
