@@ -14,7 +14,7 @@ body{
                 padding: 0;
                 text-transform: uppercase;
                 font-size: 36px;
-                font-style:italic;
+                font-style: oblique;
 
             }
         }
@@ -22,7 +22,7 @@ body{
             display: flex;
             width: 50%;
             margin: auto;
-            height: 400px;
+            height: 33rem;
             background-color: #fff;
             border: 2px solid #000;
             box-shadow: 0 15px 40px rgba(0,0,0,.5);
@@ -32,7 +32,7 @@ body{
 
             .container__left{
                 width: 50%;
-                height: 400px;
+                height: 33rem;
                 background: url(/sprint2/BRIEF_projet/images/header-home.jpg);
                 background-size: 100% 100%;
                 background-position: top;
@@ -43,16 +43,16 @@ body{
             }
             .container__right{
                 width: 50%;
-                height: 395px;    
+                height: 33rem;    
                 box-sizing: border-box;
                 @media (max-width:$mobilesize){
                     width: 100%;
                 }
                 .form_box{
                     width: 100%;
-                    padding: 100px 50px;
+                    padding: 3.5rem 3rem;
                     box-sizing: border-box;
-                    height: 400px;
+                    height: 33rem;
                     background-color: #fff;
                     p{
                         margin: 0;
@@ -62,16 +62,17 @@ body{
                     }
                     input{
                         width: 100%;
-                        margin-bottom: 1.3rem;
+                        margin-bottom: 1.2rem;
                     }
-                    input[type="text"], input[type="password"]{
+                    input[type="text"], input[type="password"],input[type="email"]{
                         border: none;
                         border-bottom: 2px solid #a6af13;
                         outline: none;
                         height: 2.5rem;
                     }
                     input[type="text"]:focus,
-                    input[type="password"]:focus
+                    input[type="password"]:focus,
+                    input[type="email"]:focus
                     {
                         border-bottom: 2px solid #262626;
                     }
@@ -98,5 +99,4 @@ body{
     }
 
 }
-
 

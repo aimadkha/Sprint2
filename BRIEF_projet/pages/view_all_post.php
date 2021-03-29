@@ -10,31 +10,38 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/all.min.css">
     <title>RESTAURANT | View Posts</title>
 </head>
 
 <body>
-<div class="container">
-    <div class="dashboard__logo">
-        <a href="../index.php"><img src="/sprint2/BRIEF_projet/images/logoB.svg" alt="" class="navbar__img"/></a>
-    </div>
-    <ul class="dashboard__ul">
-        <li><a href="../index.php">HOME</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">CONTACT</a></li>
-    </ul>
-    <div class="dashboard__profile">
-        <a href="#"><img src="/sprint2/BRIEF_projet/images/admin.png" alt="admin" class="dashboard__img"></a>
-        <h6><?php echo $_SESSION['firstname']." ". $_SESSION['lastname'] ; ?></h6>
+<header class="header">
 
-    </div>
+
+<div class="header__logo">
+  <a href="../index.php"><img src="/sprint2/BRIEF_projet/images/logo.svg" alt="" class="header__img" /></a>
 </div>
 
+<nav class="navbar">
+  <ul class="navbar__ul">
+
+
+    <li><a href="../index.php" class="navbar__ul--active">HOME</a></li>
+    <li><a href="#">ABOUT</a></li>
+    <li><a href="#">CONTACT</a></li>
+    <li><a href="login.php">LOGIN</a></li>
+    <li><a href="dashboard.php">DASHBOARD</a></li>
+    
+    <li><a href="#"><?php echo $_SESSION['firstname']." ". $_SESSION['lastname'] ; ?></a></li>
+    <li><a href="logout.php">Logout</a></li>
+  </ul>
+</nav>
+<div class="header__toggle">
+  <i class="fas fa-bars"></i>
+</div>
+</header>
 <main class="posts">
-    <h1>Welcome To Admin</h1>
-
     <div class="posts__container">
-
         <table class="posts__table">
             <thead>
                 <tr>
@@ -44,6 +51,7 @@
                     <th>Description</th>
                     <th>Image</th>
                     <th>Delete</th>
+                    <th>Edit</th>
                 </tr>
             </thead>
             <tbody>
@@ -62,8 +70,8 @@
         echo "<td>{$post_price}</td>";
         echo "<td>{$post_description}</td>";
         echo "<td><img src='{$post_img}' class='table__img'></td>";
-        echo "<td><a href='view_all_post.php?delete={$post_id}'>Delete</a></td>";
-        echo "<td><a href='edit.php?source=edit&p_id={$post_id}'>update</a></td>";
+        echo "<td><a href='view_all_post.php?delete={$post_id}'><i class='fas fa-trash-alt'></i></a></td>";
+        echo "<td><a href='edit.php?source=edit&p_id={$post_id}'><i class='fas fa-edit'></i></a></td>";
         echo "</td>";
     }
 ?>

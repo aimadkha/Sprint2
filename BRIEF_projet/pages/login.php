@@ -26,7 +26,7 @@
                         <p>Password</p>
                         <input type="password" name="password" placeholder="*******">
                         <input type="submit" value="Log In" name="login">
-                        <a href="#">Forget Password</a>
+                        <a href="registre.php">Registre</a>
                     </form>
                 </div>
             </div>

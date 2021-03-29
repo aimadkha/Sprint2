@@ -27,28 +27,42 @@ if (!isset($_SESSION['userrole'])){
 </head>
 
 <body>
-    <div class="container">
-        <div class="dashboard__logo">
-           <a href="../index.php"> <img src="/sprint2/BRIEF_projet/images/logoB.svg" alt="" class="navbar__img" /></a>
-        </div>
-        <ul class="dashboard__ul">
-            <li><a href="../index.php">HOME</a></li>
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">CONTACT</a></li>
-        </ul>
-        <div class="dashboard__profile">
-            <a href="#"><img src="/sprint2/BRIEF_projet/images/admin.png" alt="admin" class="dashboard__img"></a>
-            <a href="logout.php">Logout</a>
-        </div>
-    </div>
+<header class="header">
+
+
+<div class="header__logo">
+  <a href="../index.php"><img src="/sprint2/BRIEF_projet/images/logo.svg" alt="" class="header__img" /></a>
+</div>
+
+<nav class="navbar">
+  <ul class="navbar__ul">
+
+
+    <li><a href="../index.php" class="navbar__ul--active">HOME</a></li>
+    <li><a href="#">ABOUT</a></li>
+    <li><a href="#">CONTACT</a></li>
+    <li><a href="login.php">LOGIN</a></li>
+    <li><a href="dashboard.php">DASHBOARD</a></li>
+    
+    <li><a href="#"><?php echo $_SESSION['firstname']." ". $_SESSION['lastname'] ; ?></a></li>
+    <li><a href="logout.php">Logout</a></li>
+  </ul>
+  
+
+</nav>
+<div class="header__toggle">
+  <i class="fas fa-bars"></i>
+</div>
+</header>
+    
     <div class="admin__main">
         <h1>Welcome To Admin : <?php echo $_SESSION['firstname']." ". $_SESSION['lastname'] ; ?></h1>
 
         <h3 class="dashboard__heading">EDIT POST</h3>
         <div class="admin__btn">
             <button class="admin__add admin__btnstyle" type="submit"><a href="add_posts.php">ADD PRODUCT</a></button>
-            <button class="admin__update admin__btnstyle" type="submit"><a href="edit.php">EDIT PRODUCT</a></button>
-            <button class="admin__delete admin__btnstyle" type="submit">DELETE PRODUCT</button>
+            <!-- <button class="admin__update admin__btnstyle" type="submit"><a href="edit.php">EDIT PRODUCT</a></button> -->
+            <!-- <button class="admin__delete admin__btnstyle" type="submit">DELETE PRODUCT</button> -->
             <button class="admin__read admin__btnstyle" type="submit"> <a href="view_all_post.php">VIEW ALL POSTS</a></button>
         </div>
     </div>
