@@ -1,61 +1,87 @@
-.menu {
+.main {
+  .menu {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 28rem);
+    gap: 2.5rem;
+
+    @media (max-width: 900px) {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(4, 28rem);
+    }
+
+    @media (max-width: $mobilesize) {
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-rows: repeat(9, 28rem);
+    }
+
     &__card {
+      position: relative;
+      text-align: center;
+      background-color: var(--blackcolor);
+      box-shadow: rgba(0, 0, 10, 0.1) 0px 4px 6px -1px,
+        rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+      overflow: hidden;
+      border-radius: 1rem;
+
+      .menu__img {
         position: relative;
+        width: 100%;
+        height: 100%;
+        transition: 0.5s;
+      }
+
+      &:hover .menu__img {
+        opacity: 0.5;
+      }
+
+      .submit {
+        background-color: var(--orangecolor);
+        color: var(--whitecolor);
+        border: none;
+        border-radius: 25px;
+        width: 6rem;
+        height: 1.5rem;
+        // display: none;
+        position: absolute;
+        bottom: -100%;
+        left: 37%;
+        transition: .5s;
+        cursor: pointer;
+
+        &:active {
+          background-color: #3e8e41;
+          box-shadow: 0 5px #666;
+          transform: translateY(2px);
+          position: absolute;
+        }
+      }
+
+      .menu__text {
+        color: var(--orangecolor);
         text-align: center;
-        color: aliceblue;
-        .menu__img{
-            // position:absolute;
-            width: 100%;
-            height: 100%;
+        font-size: 1.2rem;
+        font-style: italic;
+        font-weight: bold;
+        position: absolute;
+        bottom: -200%;
+        left: 41%;
+        line-height: 2rem;
+        transition: .5s;
+        // display: none;
+      }
 
+      // }
+
+      &:hover {
+        .menu__text {
+          bottom: 30%;
         }
 
-        &--btn {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            .submit {
-                background-color: var(--orangecolor);
-                color: var(--whitecolor);
-                border: none;
-                border-radius: 25px;
-                width: 6rem;
-                height: 1.5rem;
-                display: none;
-                position: absolute;
-                bottom: 10%;
-                left: 35%;
-                cursor: pointer;
-                &:active{
-                    background-color: #3e8e41;
-                    box-shadow: 0 5px #666;
-                    transform: translateY(2px);
-                    position: absolute;
-                }
-            }
-            .menu__text{
-                color: var(--whitecolor);
-                text-align: center;
-                font-size: 1.2rem;
-                position: absolute;
-                bottom: 2%;
-                left: 3%;
-                line-height:2rem ;
-                // display: none;
-            }
-
+        .submit {
+          bottom: 20%;
         }
-
-        &:hover {
-            .menu__text{
-                display: block;
-            }
-            .submit {
-                display: block;
-                
-            }
-
-        }
+      }
     }
 
     // &__card2 {
@@ -186,8 +212,5 @@
 
     //     }
     // }
-
-
-
-
+  }
 }

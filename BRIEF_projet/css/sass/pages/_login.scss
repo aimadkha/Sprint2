@@ -1,62 +1,3 @@
-// .cont{
-//     // width: 90vw;
-//     height: 90vh;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-   
-//     .login{
-//         border: 2px solid grey;
-//         width:50%;
-//         height: 50%;
-//         display: flex;
-//         justify-content: center;
-//         align-items: center;
-//         background-color: #E8EAE6;
-//         @media (max-width:$mobilesize) {
-//             width: 50%; 
-//         }
-//         &__form{
-//             display: flex;
-//             flex-direction: column;
-//             justify-content: center;
-//             align-items: center;
-//             // .login__input{
-//             //     width: 100%;
-//             // }
-            
-
-//             .login__user{
-//                 color: var(--orangecolor);
-//                 font-size: 1rem;
-//                 font-weight: 400;
-//                 // font-style: italic;
-//                 padding: .5rem;
-//             }
-//             .login__pass{
-//                 color: var(--orangecolor);
-//                 font-size: 1rem;
-//                 font-weight: 400;
-//                 // font-style: italic;
-//                 padding: .5rem;
-//             }
-//             .login__submit{
-//                 width: 7rem;
-//                 height: 2rem;
-//                 color: var(--whitecolor);
-//                 background-color: var(--orangecolor);
-//                 border-radius: 15px;
-//                 border: none;
-//                 cursor: pointer;
-//                 margin-top: 1rem;
-//             }
-
-//         }
-        
-    
-//     }
-// }
-
 body{
     .login{
         background-image: url(/sprint2/BRIEF_projet/images/header-home.jpg);
@@ -85,6 +26,9 @@ body{
             background-color: #fff;
             border: 2px solid #000;
             box-shadow: 0 15px 40px rgba(0,0,0,.5);
+            @media (max-width:$mobilesize){
+                // flex-direction: column;
+            }
 
             .container__left{
                 width: 50%;
@@ -93,11 +37,17 @@ body{
                 background-size: 100% 100%;
                 background-position: top;
                 box-sizing: border-box;
+                @media (max-width:$mobilesize){
+                    display: none;
+                }
             }
             .container__right{
                 width: 50%;
-                height: 400px;    
+                height: 395px;    
                 box-sizing: border-box;
+                @media (max-width:$mobilesize){
+                    width: 100%;
+                }
                 .form_box{
                     width: 100%;
                     padding: 100px 50px;

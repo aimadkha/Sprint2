@@ -1,6 +1,6 @@
 <?php include "../includes/db.php" ?>
 <?php ob_start() ?>
-<?php include session_start() ?>
+<?php session_start() ?>
 
 
 <?php     
@@ -18,29 +18,26 @@
         }
         while ($row = mysqli_fetch_array($select_user_query)){
             $db_user_id = $row['user_id'];
-            $db_user_firstname = $row['user_name'];
-            $db_user_lastname = $row['user_pass'];
+            $db_user_firstname = $row['user_first_name'];
+            $db_user_lastname = $row['user_last_name'];
             $db_user_name = $row['user_name'];
             $db_user_password = $row['user_pass'];
             $db_user_mail = $row['user_email'];
             $db_user_role = $row['user_role'];
         }
-        if ($username === $db_user_name && $password === $db_user_password && $db_user_role === "admin"){
+        if ($username === $db_user_name && $password === $db_user_password ){
             $_SESSION['username'] = $db_user_name;
             $_SESSION['firstname'] = $db_user_firstname;
-            $_SESSION['username'] = $db_user_lastname;
-            $_SESSION['username'] = $db_user_role;
+            $_SESSION['lastname'] = $db_user_lastname;
+            $_SESSION['userrole'] = $db_user_role;
 
             header("Location: dashboard.php");
-        } elseif ($username === $db_user_name && $password === $db_user_password){
-            header("Location : ../index.php");
+
         } else{
+            echo "INVALID INPUT";
             header("Location:login.php");
+
         }
-
-
-
-
 
 
     }

@@ -12,7 +12,7 @@
    
     <main class="login">
         <div class="title">
-            <h1 class="title__heading">Log In Form</h1>
+            <h1 class="title__heading">Sign Up Form</h1>
         </div>
         <div class="container__login">
             <div class="container__left">
