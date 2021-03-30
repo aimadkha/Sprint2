@@ -9,6 +9,30 @@
     <title>Restaurant | LOGIN</title>
 </head>
 <body>
+<header class="header">
+
+
+<div class="header__logo">
+  <a href="../index.php"><img src="/sprint2/BRIEF_projet/images/logo.svg" alt="" class="header__img" /></a>
+</div>
+
+<nav class="navbar">
+  <ul class="navbar__ul">
+
+
+    <li><a href="../index.php" class="navbar__ul--active">HOME</a></li>
+    <li><a href="#">ABOUT</a></li>
+    <li><a href="#">CONTACT</a></li>
+    <li><a href="login.php">LOGIN</a></li>
+    <li><a href="dashboard.php">DASHBOARD</a></li>
+  </ul>
+  
+
+</nav>
+<div class="header__toggle">
+  <i class="fas fa-bars"></i>
+</div>
+</header>
    
     <main class="login">
         <div class="title">
@@ -35,6 +59,6 @@
 
     
     
-    
+    <script src="./js/app.js"></script>
 </body>
 </html>

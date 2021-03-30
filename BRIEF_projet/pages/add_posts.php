@@ -1,5 +1,5 @@
 <?php include "../includes/db.php" ?>
-<?php ob_start() ?>
+
 <?php session_start()?>
 
 <!DOCTYPE html>
@@ -85,6 +85,8 @@ if (isset($_POST['submit'])) {
 
 
 ?>
+
+<script src="../js/app.js"></script>
 
 </body>
 

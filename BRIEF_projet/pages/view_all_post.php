@@ -1,5 +1,4 @@
 <?php include "../includes/db.php" ?>
-<?php ob_start() ?>
 <?php session_start()?>
 
 <!DOCTYPE html>
@@ -84,11 +83,12 @@ if (isset($_GET['delete'])) {
 
 
     $sql_query =  "DELETE FROM products WHERE product_id = $post_id";
-    if (mysqli_query($connection, $sql_query)) {
-        echo '<h1>Deleted successful</h1>';
-    } else {
-        echo "Error: " . $sql . "<br>" . mysqli_error($connection);
-    }
+    $delete_query = mysqli_query($connection, $sql_query);
+    // if (mysqli_query($connection, $sql_query)) {
+    //     echo '<h1>Deleted successful</h1>';
+    // } else {
+    //     echo "Error: " . $sql . "<br>" . mysqli_error($connection);
+    // }
 }
 
 
