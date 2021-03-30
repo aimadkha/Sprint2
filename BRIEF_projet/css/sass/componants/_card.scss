@@ -55,69 +55,51 @@
       &:hover .menu__img {
         opacity: 0.5;
       }
-
-      .submit {
-        background-color: var(--orangecolor);
-        color: var(--whitecolor);
-        border: none;
-        text-transform: uppercase;
-        font-size: 1rem;
-        font-weight: 400;
-        line-height: 1;
-        margin: 20px;
-        border-radius: 25px;
-        width: 10rem;
-        height: 3rem;
-        // display: none;
-
+      .menu__content{
         position: absolute;
-        bottom: -100%;
-        left: 25%;
-        margin: auto;
+        left: 50%;
+        top: -50%;
+        transform: translate(-50%, -50%);
         transition: .5s;
-        cursor: pointer;
-
-        &:active {
-          background-color: #3e8e41;
-          box-shadow: 0 5px #666;
-          transform: translateY(2px);
-          position: absolute;
-        }
-        @media (max-width: 1050px) {
-          // left: 48%;
-          margin: auto;
-        }
-        @media (max-width: $mobilesize) {
-          margin: auto;
-        }
-      }
-
-      .menu__text {
-        color: var(--whitecolor);
-        text-align: center;
-        font-size: 1.2rem;
-        font-style: italic;
-        font-weight: 500;
-        position: absolute;
-        bottom: -200%;
-        left: 40%;
-        line-height: 2rem;
-        transition: .5s;
-        text-transform: uppercase;
-        // display: none;
-      }
-
-      // }
-
-      &:hover {
-        .menu__text {
-          bottom: 45%;
-        }
-
         .submit {
-          bottom: 30%;
+          background-color: var(--orangecolor);
+          color: var(--whitecolor);
+          border: none;
+          text-transform: uppercase;
+          font-size: 1rem;
+          font-weight: 400;
+          line-height: 1;
+          border-radius: 25px;
+          width: 10rem;
+          height: 3rem;
+          position: relative;
+          cursor: pointer;
+  
+          &:active {
+            background-color: #3e8e41;
+            box-shadow: 0 5px #666;
+            transform: translateY(2px);
+            position: relative;
+          }
+        }
+  
+        .menu__text {
+          color: var(--whitecolor);
+          text-align: center;
+          font-size: 1.2rem;
+          font-style: italic;
+          font-weight: 500;
+          position: relative;
+          line-height: 2rem;
+          text-transform: uppercase;
+          
         }
       }
+      &:hover .menu__content{
+        top: 50%;
+    }
+
+     
     }
 
     // &__card2 {
