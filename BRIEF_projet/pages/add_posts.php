@@ -49,10 +49,10 @@
         <input type="text" name="product_price" id=""><br>
         <label for="product_name">ADD DESCRIPTION</label><br>
         <input type="text" name="product_description" id=""><br>
-        <label for="product_name">Add Url Image</label><br>
-        <input type="text" name="product_img" id=""><br>
-        <!-- <label for="product_name">Upload IMAGE</label><br>
-        <input type="file" name="product_upload_img" id=""><br> -->
+        <!-- <label for="product_name">Add Url Image</label><br>
+        <input type="text" name="product_img" id=""><br> -->
+        <label for="product_name">Upload IMAGE</label><br>
+        <input type="file" name="product_upload_img" id=""><br>
         <input type="submit" value="ADD POST" name='submit'>
     </form>
 </div>
@@ -71,11 +71,13 @@ if (isset($_POST['submit'])) {
     $product_name = $_POST['product_name'];
     $product_price = $_POST['product_price'];
     $product_desc = $_POST['product_description'];
-    $product_img = $_POST['product_img'];
-    // $product_upload_img = $_FILES['image']['product_upload_img'];
+    // $product_img = $_POST['product_img'];
+    $product_upload_img = $_FILES['product_upload_img']['name'];
+    $product_img_temp = $_FILES['product_upload_img']['tmp_name'];
+    move_uploaded_file($product_img_temp, "../images/".$product_upload_img);
+    
 
-
-    $sql = "INSERT INTO products( product_name,product_price, product_description, product_img) VALUES('$product_name', $product_price,'$product_desc','$product_img')";
+    $sql = "INSERT INTO products( product_name,product_price, product_description, product_img) VALUES('$product_name', $product_price,'$product_desc','$product_upload_img')";
     if (mysqli_query($connection, $sql)) {
         echo '<h1>new plat added</h1>';
     } else {

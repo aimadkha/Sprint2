@@ -59,15 +59,25 @@ if (isset($_GET['p_id'])) {
 }
 
 if (isset($_POST['edit'])) {
-    echo "hello";
     $product_id = $_POST['product_id'];
     $product_name = $_POST['product_name'];
     $product_price = $_POST['product_price'];
     $product_desc = $_POST['product_description'];
     $product_img = $_POST['product_img'];
-    $sql = "UPDATE products SET product_name = '{$product_name}',product_price = {$product_price}, product_description = '{$product_desc}', product_img = '{$product_img}' WHERE product_id = '{$product_id}'";
+    $upload_img = $_FILES['product_upload_img']['name'];
+    $product_temp = $_FILES['product_upload_img']['tmp_name'];
+    if ($upload_img) {
+      move_uploaded_file($product_temp, "../images/".$upload_img);
+      $sql = "UPDATE products SET product_name = '{$product_name}',product_price = {$product_price}, product_description = '{$product_desc}', product_img = '{$upload_img}' WHERE product_id = '{$product_id}'";
+    } else {
+      $sql = "UPDATE products SET product_name = '{$product_name}',product_price = {$product_price}, product_description = '{$product_desc}', product_img = '{$product_img}' WHERE product_id = '{$product_id}'";
+    }
+
+    // move_uploaded_file($product_temp, "../images/".$upload_img);
+    // $sql = "UPDATE products SET product_name = '{$product_name}',product_price = {$product_price}, product_description = '{$product_desc}', product_img = '{$upload_img}' WHERE product_id = '{$product_id}'";
     if (mysqli_query($connection, $sql)) {
         echo '<h1>product updated</h1>';
+        header('Location:view_all_post.php');
     } else {
         echo "Error: " . $sql . "<br>" . mysqli_error($connection);
     }
@@ -77,7 +87,7 @@ if (isset($_POST['edit'])) {
 <div class="admin__main">
     <form action="/sprint2/BRIEF_PROJET/pages/edit.php" method="POST" enctype="multipart/form-data">
         <label for="product_name">id</label><br>
-        <input value="<?php echo  $post_id; ?>" type="text" name="product_id" id=""><br>
+        <input value="<?php echo  $post_id; ?>" type="text" name="product_id" id="" class="edit_input" readonly><br>
         <label for="product_name">Edit Name</label><br>
         <input value="<?php echo  $post_name; ?>" type="text" name="product_name" id=""><br>
         <label for="product_name">Edit PRICE</label><br>
@@ -86,14 +96,14 @@ if (isset($_POST['edit'])) {
         <input value="<?php echo  $post_description; ?>" type="text" name="product_description" id=""><br>
         <label for="product_name">Edit Url Image</label><br>
         <input value="<?php echo  $post_img; ?>" type="text" name="product_img" id=""><br>
-        <!-- <label for="product_name">Upload IMAGE</label><br>
-        <input type="file" name="product_upload_img" id=""><br> -->
+        <label for="product_name">Upload IMAGE</label><br>
+        <input type="file" name="product_upload_img" id=""><br>
         <input type="submit" value="Edit POST" name="edit">
     </form>
 </div>
 
 
-
+<script src="../js/app.js"></script>
 </body>
 
 </html>

@@ -150,77 +150,14 @@ body {
     background-color: var(--bgcolor);
     width: $container;
     margin: auto;
-
-    
-
-    // .menu {
-    // display: flex;
-    // flex-direction: row;
-    // flex-wrap:wrap;
-    //   display: grid;
-    //   grid-template-columns: repeat(3, 1fr);
-    //   grid-template-rows: repeat(2, 22rem);
-
-    //   @media (max-width:900px) {
-    //     grid-template-columns: repeat(2, 1fr);
-    //     grid-template-rows: repeat(3, 22rem);
-    //   }
-    //   @media (max-width:$mobilesize) {
-    //     grid-template-columns: repeat(1, 1fr);
-    //     grid-template-rows: repeat(6, 22rem);
-    //   }
-
-
-    // .menu__card {
-    // background-image: url(/sprint2/BRIEF_projet/images/1.JPEG);
-    // background-size: 100% 100%;
-    // background-repeat: no-repeat;
-    //   clip-path: polygon(0 0, 100% 0, 100% 60%, 0 100%);
-    //   background-size: cover;
-    // }
-
-    // .menu__card2 {
-    //   background-image: url(/sprint2/BRIEF_projet/images/2.JPEG);
-    //   background-size: 100% 100%;
-    //   background-repeat: no-repeat;
-    //   //   background-size: cover;
-    // }
-
-    // .menu__card3 {
-    //   background-image: url(/sprint2/BRIEF_projet/images/3.JPEG);
-    //   background-size: 100% 100%;
-    //   background-repeat: no-repeat;
-    //   //   background-size: cover;
-    // }
-
-    // .menu__card4 {
-    //   background-image: url(/sprint2/BRIEF_projet/images/4.JPEG);
-    //   background-size: 100% 100%;
-    //   background-repeat: no-repeat;
-    //   //   background-size: cover;
-    // }
-
-    // .menu__card5 {
-    //   background-image: url(/sprint2/BRIEF_projet/images/5.JPEG);
-    //   background-size: 100% 100%;
-    //   background-repeat: no-repeat;
-    //   //   background-size: cover;
-    // }
-
-    // .menu__card6 {
-    //   background-image: url(/sprint2/BRIEF_projet/images/6.JPEG);
-    //   background-size: 100% 100%;
-    //   background-repeat: no-repeat;
-    //   //   background-size: cover;
-    // }
-
-    // }
   }
 }
 
 .footer {
   width: $container;
-  margin: auto;
+  margin: 3rem auto 0;
+  border-top: 5px solid #eef2f3;
+  
 
 
   .contact {

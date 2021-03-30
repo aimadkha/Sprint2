@@ -27,7 +27,7 @@
         <li><a href="#">ABOUT</a></li>
         <li><a href="#">CONTACT</a></li>
         <li><a href="./pages/login.php">LOGIN</a></li>
-        <li><a href="./pages/dashboard.php">DASHBOARD</a></li>
+        <!-- <li><a href="./pages/dashboard.php">DASHBOARD</a></li> -->
       </ul>
 
     </nav>
@@ -53,7 +53,7 @@
     <div class="menu">
       
       <?php 
-            $sql_query_select = "SELECT * FROM products LIMIT 9 ";
+            $sql_query_select = "SELECT * FROM products LIMIT 14 ";
             $result = mysqli_query($connection, $sql_query_select);
             
               while ($row = mysqli_fetch_assoc($result)) {
@@ -62,57 +62,25 @@
                 $price_product = $row['product_price'];
                 $img_product = $row['product_img'];
                 echo '<div class="menu__card">';
-                echo '<img src="'.$img_product.'" alt="" class="menu__img">';
+                echo "<img src='/sprint2/BRIEF_PROJET/images/$img_product' alt='' class='menu__img'>";
                 
+                echo '<div class="menu__content">';
                 echo '<p class="menu__text">';
                 echo '<span class="menu__name">'. $name_product. '</span><br>';
                 echo '<span class="menu__price">'. $price_product .' DH</span><br>';
                 
                  echo '</p>';
                  echo '<button type="submit" class="submit">Order now</button>';
-                
+                 echo '</div>';
               echo '</div>';
               }
             
           
           ?>
-      <!-- <img src="" alt="" class="menu__img">
-          <div class="menu__card1--btn">
-            <p class="menu__text">
-              <span class="menu__price">ONLY 65DH</span><br>
-              <span class="menu__name">DELICOUS FOOD</span>
-            </p>
-            <button type="submit" class="submit">Order now</button>
-          </div>
-        </div> -->
-      <!-- <div class="menu__card2">
-          <div class="menu__card2--btn">
-            <button type="submit" class="submit">Order now</button>
-          </div>
-        </div>
-        <div class="menu__card3">
-          <div class="menu__card3--btn">
-            <button type="submit" class="submit">Order now</button>
-          </div>
-        </div>
-        <div class="menu__card4">
-          <div class="menu__card4--btn">
-            <button type="submit" class="submit">Order now</button>
-          </div>
-        </div>
-        <div class="menu__card5">
-          <div class="menu__card5--btn">
-            <button type="submit" class="submit">Order now</button>
-          </div>
-        </div>
-        <div class="menu__card6">
-          <div class="menu__card6--btn">
-            <button type="submit" class="submit">Order now</button>
-          </div>
-        </div> -->
+
     </div>
   </main>
-  <!-- </div> -->
+  
 
   <footer class="footer">
     <div class="contact">

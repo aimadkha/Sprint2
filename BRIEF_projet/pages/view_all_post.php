@@ -68,7 +68,7 @@
         echo "<td>{$post_name}</td>";
         echo "<td>{$post_price}</td>";
         echo "<td>{$post_description}</td>";
-        echo "<td><img src='{$post_img}' class='table__img'></td>";
+        echo "<td><img src='/sprint2/BRIEF_PROJET/images/$post_img' class='table__img'></td>";
         echo "<td><a href='view_all_post.php?delete={$post_id}'><i class='fas fa-trash-alt'></i></a></td>";
         echo "<td><a href='edit.php?source=edit&p_id={$post_id}'><i class='fas fa-edit'></i></a></td>";
         echo "</td>";
