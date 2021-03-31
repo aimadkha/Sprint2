@@ -24,7 +24,7 @@
     <li><a href="#">ABOUT</a></li>
     <li><a href="#">CONTACT</a></li>
     <li><a href="login.php">LOGIN</a></li>
-    <li><a href="dashboard.php">DASHBOARD</a></li>
+    <!-- <li><a href="dashboard.php">DASHBOARD</a></li> -->
   </ul>
   
 

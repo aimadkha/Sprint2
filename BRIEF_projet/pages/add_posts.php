@@ -29,7 +29,7 @@
         <li><a href="../index.php" class="navbar__ul--active">HOME</a></li>
         <li><a href="#">ABOUT</a></li>
         <li><a href="#">CONTACT</a></li>
-        <li><a href="login.php">LOGIN</a></li>
+        <!-- <li><a href="login.php">LOGIN</a></li> -->
         <li><a href="dashboard.php">DASHBOARD</a></li>
         <li><a href="#"><?php echo $_SESSION['firstname']." ". $_SESSION['lastname'] ; ?></a></li>
       </ul>
@@ -60,12 +60,7 @@
 
 <?php
 
-// $db_server = 'localhost:3307';
-// $db_user = 'root';
-// $db_pass = '';
-// $db_name = 'restaurant';
 
-// $connection = mysqli_connect($db_server, $db_user, $db_pass, $db_name);
 
 if (isset($_POST['submit'])) {
     $product_name = $_POST['product_name'];
