@@ -15,9 +15,10 @@
 if (isset($_POST['registre'])) {
     $first_name = $_POST['firstname'];
     $last_name = $_POST['lastname'];
-    $user_name = $_POST['lastname'];
+    $user_name = $_POST['username'];
     $user_email = $_POST['useremail'];
-    $password = $_POST['password'];
+    $password = password_hash($_POST['password'],PASSWORD_DEFAULT);
+    // $hashed_pass = password_hash($password,PASSWORD_DEFAULT);
 
     $sql = "INSERT INTO users(user_first_name,user_last_name,user_name,user_pass,user_email,user_role) VALUES('$first_name','$last_name','$user_name','$password','$user_email','user')";
     if (mysqli_query($connection, $sql)) {
