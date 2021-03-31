@@ -4,8 +4,6 @@
 
 <?php     
     if (isset($_POST['login'])) {
-        echo $username = $_POST['username'];
-        echo $password = $_POST['password'];
 
         $username = mysqli_real_escape_string($connection, $username);
         $password = mysqli_real_escape_string($connection, $password);
