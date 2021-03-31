@@ -28,7 +28,7 @@
     <li><a href="../index.php" class="navbar__ul--active">HOME</a></li>
     <li><a href="#">ABOUT</a></li>
     <li><a href="#">CONTACT</a></li>
-    <li><a href="login.php">LOGIN</a></li>
+    <!-- <li><a href="login.php">LOGIN</a></li> -->
     <li><a href="dashboard.php">DASHBOARD</a></li>
     
     <li><a href="#"><?php echo $_SESSION['firstname']." ". $_SESSION['lastname'] ; ?></a></li>
