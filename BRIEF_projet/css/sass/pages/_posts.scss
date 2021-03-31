@@ -1,0 +1,36 @@
+.posts{
+    width: 90%;
+    margin:4rem auto;
+    &__container{
+        .posts__table{
+            border: 1px solid #999;
+            padding: 0.5rem;
+            thead{
+                border: 1px solid #999;
+            }
+            
+            tr{
+                    border: 1px solid #999;
+                    padding: 0.5rem;
+            }
+            th{
+                border: 1px solid #999;
+                padding: 0.5rem;
+              }
+              tbody{
+                td{
+                    border: 1px solid #999;
+                    padding: 0.5rem;
+                    .table__img{
+                        width: 100%;
+                        height: 10rem;
+                    }
+                    a{
+                        text-decoration: none;
+                    }
+                  }
+              }
+              
+        }
+    }
+}
