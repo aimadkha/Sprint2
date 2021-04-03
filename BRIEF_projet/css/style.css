@@ -59,6 +59,18 @@ body {
             text-align: center; } }
         body .header .navbar__ul li {
           list-style-type: none; }
+        body .header .navbar__ul #nav__drop {
+          position: relative; }
+          body .header .navbar__ul #nav__drop .navbar__content {
+            position: absolute;
+            display: none; }
+            @media (max-width: 767px) {
+              body .header .navbar__ul #nav__drop .navbar__content {
+                width: 100vw;
+                text-align: center;
+                background-color: #333; } }
+          body .header .navbar__ul #nav__drop .navbar__drop--active {
+            display: block; }
         body .header .navbar__ul a {
           text-decoration: none;
           color: var(--whitecolor);

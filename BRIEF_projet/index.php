@@ -1,4 +1,5 @@
 <?php include "./includes/db.php" ?>
+<?php session_start()  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +28,13 @@
         <li><a href="#">ABOUT</a></li>
         <li><a href="#">CONTACT</a></li>
         <li><a href="./pages/login.php">LOGIN</a></li>
-        <!-- <li><a href="./pages/dashboard.php">DASHBOARD</a></li> -->
+        <li id="nav__drop"><a href="#"><?php echo $_SESSION['firstname']." ". $_SESSION['lastname'] ; ?></a>
+          <div class="navbar__content">
+          <a href="./pages/dashboard.php">Dashboard</a>
+          <a href="./pages/logout.php">Log Out</a>
+          </div>
+        </li>
+        
       </ul>
 
     </nav>

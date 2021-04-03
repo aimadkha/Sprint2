@@ -54,6 +54,21 @@ body {
         li{
           list-style-type: none;
         }
+        #nav__drop{
+          position: relative;
+          .navbar__content{
+            position: absolute;
+            display: none;
+            @media (max-width: $mobilesize) {
+              width: 100vw;
+              text-align: center;
+              background-color: #333;
+            }
+          }
+          .navbar__drop--active{
+            display: block;
+          }
+        } 
 
         a {
           text-decoration: none;
@@ -71,6 +86,7 @@ body {
           @media (max-width: $mobilesize) {
             border-bottom: 1px solid rgba(0, 0, 0, .3);
           }
+          
           
         }
         .navbar__ul--active{
@@ -96,6 +112,7 @@ body {
     .active{
       left: 0;
     }
+    
   } 
 
     .home {
