@@ -1,3 +1,49 @@
+<?php include "../includes/db.php" ?>
+<?php session_start() ?>
+
+
+<?php     
+    
+    if (isset($_POST['login'])) {
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+        $login_message ;
+
+        $username = mysqli_real_escape_string($connection, $username);
+        $password = mysqli_real_escape_string($connection, $password);
+
+        $query = "SELECT * FROM users WHERE user_name = '{$username}'";
+        $select_user_query = mysqli_query($connection, $query);
+        if (!$select_user_query){
+            die("failed". mysqli_error($connection));
+        }
+        while ($row = mysqli_fetch_array($select_user_query)){
+            $db_user_id = $row['user_id'];
+            $db_user_firstname = $row['user_first_name'];
+            $db_user_lastname = $row['user_last_name'];
+            $db_user_name = $row['user_name'];
+            $db_user_password = $row['user_pass'];
+            $db_user_mail = $row['user_email'];
+            $db_user_role = $row['user_role'];
+        }
+        if ($username === $db_user_name && password_verify($password, $db_user_password)){
+            $_SESSION['username'] = $db_user_name;
+            $_SESSION['firstname'] = $db_user_firstname;
+            $_SESSION['lastname'] = $db_user_lastname;
+            $_SESSION['userrole'] = $db_user_role;
+
+            header("Location: dashboard.php");
+
+        } else{
+            $login_message = "Invalid username or password ! Try again";
+            echo "<h3 id='login_error'>{$login_message}</h3>";
+            header("Location:login.php");
+
+        }
+
+
+    }
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -37,6 +83,8 @@
     <main class="login">
         <div class="title">
             <h1 class="title__heading">Sign Up Form</h1>
+            <h3 style="color:white;"id="login_error"></h3>
+            
         </div>
         <div class="container__login">
             <div class="container__left">
@@ -44,7 +92,7 @@
             </div>
             <div class="container__right">
                 <div class="form_box">
-                    <form action="display.php" method="post">
+                    <form action="login.php" method="post">
                         <p>Username</p>
                         <input type="text" name="username" placeholder="username">
                         <p>Password</p>
