@@ -1,4 +1,5 @@
 <?php include "./includes/db.php" ?>
+<?php session_start()  ?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -24,10 +25,29 @@
 
 
         <li><a href="#" class="navbar__ul--active">HOME</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">CONTACT</a></li>
-        <li><a href="./pages/login.php">LOGIN</a></li>
-        <!-- <li><a href="./pages/dashboard.php">DASHBOARD</a></li> -->
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#footer">CONTACT</a></li>
+
+
+        <?php 
+        
+      if (!empty($_SESSION)) {
+        if ($_SESSION['userrole'] === 'admin') {
+          echo '<li id="nav__drop"><a href="#">'.$_SESSION["firstname"]." ".$_SESSION["lastname"].'</a>';
+          
+          echo '<div class="navbar__content">';
+          echo '<a href="./pages/dashboard.php">Dashboard</a>';
+          echo '<a href="./pages/logout.php">Log Out</a>';
+          echo '</div>';
+        echo '</li>';
+        } 
+      } else {
+          echo '<li><a href="./pages/login.php">LOGIN</a></li>';
+        }
+         
+        
+        ?>
+        
       </ul>
 
     </nav>
@@ -79,10 +99,28 @@
           ?>
 
     </div>
+  
   </main>
+  <!-- start about section -->
+  <div class="about" id="about">
+    <div class="container">
+          <div class="about__heading">
+              <h3>ABOUT US</h3>
+              <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, sapiente.</P>
+          </div>
+          <div class="about__content">
+             <img src="images/about.jpg" alt="about us">
+            <div class="about__text">
+              <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Cupiditate reiciendis distinctio officia eaque labore consectetur, voluptatem dolorem odit placeat ex rerum sapiente delectus facilis, maxime veniam quam, adipisci praesentium rem.</p>
+            </div>
+          </div>
+    </div>
+  </div>
+  <!-- end about section -->
+
   
 
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="contact">
       <div class="contact__info">
         <img src="/sprint2/BRIEF_projet/images/logoB.svg" alt="logo" class="contact__logo">
