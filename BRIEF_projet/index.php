@@ -25,8 +25,8 @@
 
 
         <li><a href="#" class="navbar__ul--active">HOME</a></li>
-        <li><a href="#">ABOUT</a></li>
-        <li><a href="#">CONTACT</a></li>
+        <li><a href="#about">ABOUT</a></li>
+        <li><a href="#footer">CONTACT</a></li>
 
 
         <?php 
@@ -102,7 +102,7 @@
   
   </main>
   <!-- start about section -->
-  <div class="about">
+  <div class="about" id="about">
     <div class="container">
           <div class="about__heading">
               <h3>ABOUT US</h3>
@@ -120,7 +120,7 @@
 
   
 
-  <footer class="footer">
+  <footer class="footer" id="footer">
     <div class="contact">
       <div class="contact__info">
         <img src="/sprint2/BRIEF_projet/images/logoB.svg" alt="logo" class="contact__logo">

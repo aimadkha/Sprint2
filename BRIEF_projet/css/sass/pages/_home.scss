@@ -172,7 +172,7 @@ body {
 
 .about{
   background-color: var(--whitecolor);
-  height: 80vh;
+  height: 90vh;
   margin-top: 3rem;
   .container{
     width: 80%;
@@ -204,6 +204,7 @@ body {
      .about__text{
        width: 40%;
        line-height: 2.5;
+       font-style: italic;
      }
    }
   }
@@ -213,6 +214,7 @@ body {
   width: $container;
   margin: 3rem auto 0;
   border-top: 5px solid #eef2f3;
+  height: 50vh;
   
 
 
