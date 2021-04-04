@@ -140,6 +140,37 @@ body {
     width: 80%;
     margin: auto; }
 
+.about {
+  background-color: var(--whitecolor);
+  height: 80vh;
+  margin-top: 3rem; }
+  .about .container {
+    width: 80%;
+    margin: auto;
+    margin-top: 3rem; }
+    .about .container .about__heading {
+      text-align: center; }
+      .about .container .about__heading h3 {
+        font-size: 8rem;
+        color: #EBECED; }
+      .about .container .about__heading p {
+        font-size: 1.2rem;
+        color: #797979;
+        margin-top: -2rem; }
+    .about .container .about__content {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 3rem; }
+      .about .container .about__content img {
+        width: 40%;
+        border-radius: 1rem;
+        border: 2px solid #797979; }
+      .about .container .about__content .about__text {
+        width: 40%;
+        line-height: 2.5; }
+
 .footer {
   width: 80%;
   margin: 3rem auto 0;
