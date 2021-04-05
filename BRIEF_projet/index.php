@@ -31,18 +31,18 @@
 
         <?php 
         
-      if (!empty($_SESSION)) {
-        if ($_SESSION['userrole'] === 'admin') {
-          echo '<li id="nav__drop"><a href="#">'.$_SESSION["firstname"]." ".$_SESSION["lastname"].'</a>';
-          
-          echo '<div class="navbar__content">';
-          echo '<a href="./pages/dashboard.php">Dashboard</a>';
-          echo '<a href="./pages/logout.php">Log Out</a>';
-          echo '</div>';
-        echo '</li>';
-        } 
+      if (empty($_SESSION) || $_SESSION['userrole'] !== 'admin') {
+        echo '<li><a href="./pages/login.php">LOGIN</a></li>';
+        
       } else {
-          echo '<li><a href="./pages/login.php">LOGIN</a></li>';
+        echo '<li id="nav__drop"><a href="#">'.$_SESSION["firstname"]." ".$_SESSION["lastname"].'</a>';
+          
+        echo '<div class="navbar__content">';
+        echo '<a href="./pages/dashboard.php">Dashboard</a>';
+        echo '<a href="./pages/logout.php">Log Out</a>';
+        echo '</div>';
+      echo '</li>';
+          
         }
          
         

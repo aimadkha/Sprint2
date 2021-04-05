@@ -87,7 +87,7 @@ if (isset($_POST['edit'])) {
 <div class="admin__main">
     <form action="/sprint2/BRIEF_PROJET/pages/edit.php" method="POST" enctype="multipart/form-data">
         <label for="product_name">id</label><br>
-        <input value="<?php echo  $post_id; ?>" type="text" name="product_id" id="" class="edit_input" disabled><br>
+        <input value="<?php echo  $post_id; ?>" type="text" name="product_id" id="" class="edit_input" readonly><br>
         <label for="product_name">Edit Name</label><br>
         <input value="<?php echo  $post_name; ?>" type="text" name="product_name" id=""><br>
         <label for="product_name">Edit PRICE</label><br>
